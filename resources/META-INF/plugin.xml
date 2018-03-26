@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>co.jeshan.code.typeformation</id>
+    <name>Typeformation</name>
+    <version>0.1</version>
+    <vendor email="j@jeshan.co" url="https://github.com/jeshan">Jeshan Babooa</vendor>
+
+    <description><![CDATA[
+      Type Cloudformation templates with pleasure!
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplatesProvider implementation="TypeFormationProvider"/>
+        <liveTemplateContext implementation="TypeFormationContext"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
