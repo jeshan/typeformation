@@ -2948,4 +2948,87 @@
             <option name="sbt" value="false" />
         </context>
     </template>
+    <template name="c9" value="$RESOURCE_NAME$:&#10;  Type: AWS::Cloud9::EnvironmentEC2&#10;  Properties:&#10;    Name: $NAME$&#10;    InstanceType: $INS$&#10;    SubnetId: !Ref $SUBNET$&#10;    AutomaticStopTimeMinutes: $TIMEOUT$&#10;    OwnerArn: !Sub 'arn:aws:iam::${AWS::AccountId}:$OWNER$'&#10;    Repositories:&#10;    -  PathComponent: $REPO$&#10;       RepositoryUrl: !Sub '$URL$'" description="cloud 9 ide" toReformat="true" toShortenFQNames="true">
+        <variable name="RESOURCE_NAME" expression="" defaultValue="&quot;C9&quot;" alwaysStopAt="true" />
+        <variable name="NAME" expression="lowercaseAndDash(RESOURCE_NAME)" defaultValue="" alwaysStopAt="true" />
+        <variable name="INS" expression="enum(&quot;c3.2xlarge&quot;, &quot;c3.4xlarge&quot;, &quot;c3.8xlarge&quot;, &quot;c3.large&quot;, &quot;c3.xlarge&quot;, &quot;c4.2xlarge&quot;, &quot;c4.4xlarge&quot;, &quot;c4.8xlarge&quot;, &quot;c4.large&quot;, &quot;c4.xlarge&quot;, &quot;m3.2xlarge&quot;, &quot;m3.large&quot;, &quot;m3.medium&quot;, &quot;m3.xlarge&quot;, &quot;m4.10xlarge&quot;, &quot;m4.16xlarge&quot;, &quot;m4.2xlarge&quot;, &quot;m4.4xlarge&quot;, &quot;m4.large&quot;, &quot;m4.xlarge&quot;, &quot;t2.2xlarge&quot;, &quot;t2.large&quot;, &quot;t2.medium&quot;, &quot;t2.micro&quot;, &quot;t2.nano&quot;, &quot;t2.small&quot;, &quot;t2.xlarge&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="SUBNET" expression="" defaultValue="&quot;Subnet&quot;" alwaysStopAt="true" />
+        <variable name="TIMEOUT" expression="" defaultValue="&quot;30&quot;" alwaysStopAt="true" />
+        <variable name="OWNER" expression="enum(&quot;root&quot;, &quot;user/${User}&quot;, &quot;group/${Group}&quot;, &quot;role/${Role}&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="REPO" expression="" defaultValue="&quot;org-name/repo-name&quot;" alwaysStopAt="true" />
+        <variable name="URL" expression="enum(concat(&quot;https://github.com/&quot;, REPO, &quot;.git&quot;), concat(&quot;https://git-codecommit.${AWS::Region}.amazonaws.com/v1/repos/&quot;, REPO))" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="c9r" value="$REPO$:&#10;  Type: AWS::CodeCommit::Repository&#10;  Properties:&#10;    RepositoryName: '$REPO_NAME$'&#10;    RepositoryDescription: 'Git repo for the $REPO_NAME$ project'&#10;&#10;$RESOURCE_NAME$:&#10;  Type: AWS::Cloud9::EnvironmentEC2&#10;  Properties:&#10;    Name: $NAME$&#10;    InstanceType: $INS$&#10;    Description: '$DESC$'&#10;    SubnetId: !Ref $SUBNET$&#10;    AutomaticStopTimeMinutes: $TIMEOUT$&#10;    OwnerArn: !Sub 'arn:aws:iam::${AWS::AccountId}:$OWNER$'&#10;    Repositories:&#10;    -  PathComponent: !Sub '${$REPO$.Name}'&#10;       RepositoryUrl: !Sub '${$REPO$.CloneUrlHttp}'" description="cloud 9 ide with codecommit repo" toReformat="true" toShortenFQNames="true">
+        <variable name="REPO" expression="" defaultValue="&quot;Repo&quot;" alwaysStopAt="true" />
+        <variable name="REPO_NAME" expression="lowercaseAndDash(REPO)" defaultValue="" alwaysStopAt="true" />
+        <variable name="RESOURCE_NAME" expression="" defaultValue="&quot;C9&quot;" alwaysStopAt="true" />
+        <variable name="INS" expression="enum(&quot;c3.2xlarge&quot;, &quot;c3.4xlarge&quot;, &quot;c3.8xlarge&quot;, &quot;c3.large&quot;, &quot;c3.xlarge&quot;, &quot;c4.2xlarge&quot;, &quot;c4.4xlarge&quot;, &quot;c4.8xlarge&quot;, &quot;c4.large&quot;, &quot;c4.xlarge&quot;, &quot;m3.2xlarge&quot;, &quot;m3.large&quot;, &quot;m3.medium&quot;, &quot;m3.xlarge&quot;, &quot;m4.10xlarge&quot;, &quot;m4.16xlarge&quot;, &quot;m4.2xlarge&quot;, &quot;m4.4xlarge&quot;, &quot;m4.large&quot;, &quot;m4.xlarge&quot;, &quot;t2.2xlarge&quot;, &quot;t2.large&quot;, &quot;t2.medium&quot;, &quot;t2.micro&quot;, &quot;t2.nano&quot;, &quot;t2.small&quot;, &quot;t2.xlarge&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="NAME" expression="lowercaseAndDash(RESOURCE_NAME)" defaultValue="" alwaysStopAt="true" />
+        <variable name="DESC" expression="concat(&quot;IDE for the &quot;, REPO, &quot; project&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="SUBNET" expression="" defaultValue="&quot;Subnet&quot;" alwaysStopAt="true" />
+        <variable name="TIMEOUT" expression="" defaultValue="&quot;30&quot;" alwaysStopAt="true" />
+        <variable name="OWNER" expression="enum(&quot;root&quot;, &quot;user/${User}&quot;, &quot;group/${Group}&quot;, &quot;role/${Role}&quot;)" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
 </templateSet>
