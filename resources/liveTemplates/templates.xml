@@ -34,9 +34,9 @@
     </template>
     <template name="fn" value="$NAME$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$FILE$&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;" description="serverless function" toReformat="false" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;.handler&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="" defaultValue="&quot;python3.6&quot;" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
@@ -69,8 +69,9 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="fnp" value="$NAME$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$END$.py&#10;    Handler: index.handler&#10;    Runtime: python3.6&#10;" description="simple serverless python 3 function" toReformat="true" toShortenFQNames="true">
+    <template name="fnp" value="$NAME$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$END$.py&#10;    Handler: index.handler&#10;    Runtime: $RUNTIME$&#10;" description="simple serverless python 3 function" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
@@ -105,9 +106,9 @@
     </template>
     <template name="fn3" value="$RESOURCE$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$FILE$&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    FunctionName: $FN_NAME$&#10;    Role: !Sub '${$ROLE$.Arn}'&#10;    MemorySize: $MEMORY$&#10;    Timeout: $TIMEOUT$&#10;    VpcConfig:&#10;      SecurityGroupIds: !Ref $GROUPS$&#10;      SubnetIds: !Ref $SUBNETS$&#10;    Description: $DESCRIPTION$&#10;    ReservedConcurrentExecutions: $CONCURRENT$" description="full serverless function" toReformat="true" toShortenFQNames="true">
         <variable name="RESOURCE" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="" defaultValue="&quot;python3.6&quot;" alwaysStopAt="true" />
         <variable name="FN_NAME" expression="" defaultValue="&quot;fn&quot;" alwaysStopAt="true" />
         <variable name="ROLE" expression="" defaultValue="&quot;Role&quot;" alwaysStopAt="true" />
         <variable name="MEMORY" expression="" defaultValue="&quot;128&quot;" alwaysStopAt="true" />
@@ -184,9 +185,9 @@
     </template>
     <template name="fn1" value="$RESOURCE$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$FILE$&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    MemorySize: $MEMORY$&#10;    Timeout: $TIMEOUT$" description="" toReformat="true" toShortenFQNames="true">
         <variable name="RESOURCE" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="" defaultValue="&quot;python3.6&quot;" alwaysStopAt="true" />
         <variable name="MEMORY" expression="" defaultValue="&quot;128&quot;" alwaysStopAt="true" />
         <variable name="TIMEOUT" expression="" defaultValue="&quot;3&quot;" alwaysStopAt="true" />
         <context>
@@ -223,9 +224,9 @@
     </template>
     <template name="fn2" value="$RESOURCE$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$FILE$&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    FunctionName: $FN_NAME$&#10;    MemorySize: $MEMORY$&#10;    Timeout: $TIMEOUT$&#10;    ReservedConcurrentExecutions: $CONCURRENT$" description="" toReformat="true" toShortenFQNames="true">
         <variable name="RESOURCE" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="" defaultValue="&quot;python3.6&quot;" alwaysStopAt="true" />
         <variable name="FN_NAME" expression="" defaultValue="&quot;fn&quot;" alwaysStopAt="true" />
         <variable name="MEMORY" expression="" defaultValue="&quot;128&quot;" alwaysStopAt="true" />
         <variable name="TIMEOUT" expression="" defaultValue="&quot;3&quot;" alwaysStopAt="true" />
@@ -332,9 +333,43 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="p3" value="$NAME$:&#10;  Type: $TYPE$&#10;  AllowedPattern:&#10;  AllowedValues: $VALUES$&#10;  Default: $DEFAULT$&#10;  ConstraintDescription:&#10;  Description: $DESCRIPTION$&#10;  NoEcho: true&#10;  MinValue: 1&#10;  MaxValue: &#10;  MinLength: 1&#10;  MaxLength: &#10;  $END$" description="" toReformat="false" toShortenFQNames="true">
+    <template name="ps" value="$NAME$:&#10;  Type: String&#10;  $END$" description="string parameter" toReformat="false" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="TYPE" expression="" defaultValue="&quot;String&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="p2" value="$NAME$:&#10;  Type: $TYPE$&#10;  AllowedValues: $VALUES$&#10;  Default: $DEFAULT$&#10;  Description: $DESCRIPTION$&#10;  $END$" description="parameter with allowed values" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="TYPE" expression="enum(&quot;String&quot;, &quot;Number&quot;, &quot;List&lt;Number&gt;&quot;, &quot;CommaDelimitedList&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="VALUES" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="DEFAULT" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
@@ -370,81 +405,9 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="ps" value="$NAME$:&#10;  Type: String&#10;  $END$" description="" toReformat="false" toShortenFQNames="true">
+    <template name="p1" value="$NAME$:&#10;  Type: $TYPE$&#10;  Default: $DEFAULT$&#10;  Description: $DESCRIPTION$&#10;  $END$" description="basic parameter" toReformat="false" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="ACTION_SCRIPT" value="false" />
-            <option name="ASPECTJ" value="false" />
-            <option name="Bash" value="false" />
-            <option name="CSS" value="false" />
-            <option name="CUCUMBER_FEATURE_FILE" value="false" />
-            <option name="CoffeeScript" value="false" />
-            <option name="ColdFusion" value="false" />
-            <option name="Django" value="false" />
-            <option name="GROOVY" value="false" />
-            <option name="GSP" value="false" />
-            <option name="HAML" value="false" />
-            <option name="HTML" value="false" />
-            <option name="Handlebars" value="false" />
-            <option name="JAVA_CODE" value="false" />
-            <option name="JAVA_SCRIPT" value="false" />
-            <option name="JSON" value="false" />
-            <option name="JSP" value="false" />
-            <option name="KOTLIN" value="false" />
-            <option name="MAVEN" value="false" />
-            <option name="MXML" value="false" />
-            <option name="OTHER" value="true" />
-            <option name="Python" value="false" />
-            <option name="REQUEST" value="false" />
-            <option name="SCALA" value="false" />
-            <option name="SQL" value="false" />
-            <option name="SSP" value="false" />
-            <option name="TypeScript" value="false" />
-            <option name="XML" value="false" />
-            <option name="sbt" value="false" />
-        </context>
-    </template>
-    <template name="p2" value="$NAME$:&#10;  Type: $TYPE$&#10;  AllowedValues: $VALUES$&#10;  Default: $DEFAULT$&#10;  Description: $DESCRIPTION$&#10;  NoEcho: true&#10;  $END$" description="" toReformat="true" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="TYPE" expression="" defaultValue="&quot;String&quot;" alwaysStopAt="true" />
-        <variable name="VALUES" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="DEFAULT" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
-        <context>
-            <option name="ACTION_SCRIPT" value="false" />
-            <option name="ASPECTJ" value="false" />
-            <option name="Bash" value="false" />
-            <option name="CSS" value="false" />
-            <option name="CUCUMBER_FEATURE_FILE" value="false" />
-            <option name="CoffeeScript" value="false" />
-            <option name="ColdFusion" value="false" />
-            <option name="Django" value="false" />
-            <option name="GROOVY" value="false" />
-            <option name="GSP" value="false" />
-            <option name="HAML" value="false" />
-            <option name="HTML" value="false" />
-            <option name="Handlebars" value="false" />
-            <option name="JAVA_CODE" value="false" />
-            <option name="JAVA_SCRIPT" value="false" />
-            <option name="JSON" value="false" />
-            <option name="JSP" value="false" />
-            <option name="KOTLIN" value="false" />
-            <option name="MAVEN" value="false" />
-            <option name="MXML" value="false" />
-            <option name="OTHER" value="true" />
-            <option name="Python" value="false" />
-            <option name="REQUEST" value="false" />
-            <option name="SCALA" value="false" />
-            <option name="SQL" value="false" />
-            <option name="SSP" value="false" />
-            <option name="TypeScript" value="false" />
-            <option name="XML" value="false" />
-            <option name="sbt" value="false" />
-        </context>
-    </template>
-    <template name="p1" value="$NAME$:&#10;  Type: $TYPE$&#10;  Default: $DEFAULT$&#10;  Description: $DESCRIPTION$&#10;  $END$" description="" toReformat="false" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="TYPE" expression="" defaultValue="&quot;String&quot;" alwaysStopAt="true" />
+        <variable name="TYPE" expression="enum(&quot;String&quot;, &quot;Number&quot;, &quot;List&lt;Number&gt;&quot;, &quot;CommaDelimitedList&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="DEFAULT" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
@@ -545,7 +508,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="o2" value="$NAME$:&#10;  Value: !Ref $VALUE$&#10;  Export:&#10;    Name: $NAME$&#10;    Description: $DESC$&#10;  $END$" description="output" toReformat="false" toShortenFQNames="true">
+    <template name="o2" value="$NAME$:&#10;  Value: !Ref $VALUE$&#10;  Export:&#10;    Name: $NAME$&#10;    Description: $DESC$&#10;  $END$" description="exported output" toReformat="false" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="DESC" expression="" defaultValue="" alwaysStopAt="true" />
@@ -793,7 +756,7 @@
     </template>
     <template name="fni" value="InvokePermission:&#10;  Type: AWS::Lambda::Permission&#10;  Properties:&#10;    FunctionName: !Ref $FN$&#10;    Action: 'lambda:InvokeFunction'&#10;    Principal: $PRINCIPAL$.amazonaws.com&#10;    SourceAccount: $ACCOUNT$&#10;    SourceArn: !Sub 'arn:aws:$SERVICE$:::$RESOURCE$'&#10;  $END$" description="an invoke permission on a function" toReformat="true" toShortenFQNames="true">
         <variable name="FN" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
-        <variable name="PRINCIPAL" expression="" defaultValue="&quot;s3&quot;" alwaysStopAt="true" />
+        <variable name="PRINCIPAL" expression="enum(&quot;acm&quot;,&quot;apigateway&quot;,&quot;athena&quot;,&quot;autoscaling&quot;,&quot;clouddirectory&quot;,&quot;cloudformation&quot;,&quot;cloudfront&quot;,&quot;cloudsearch&quot;,&quot;cloudtrail&quot;,&quot;codecommit&quot;,&quot;codedeploy&quot;,&quot;codepipeline&quot;,&quot;config&quot;,&quot;datapipeline&quot;,&quot;directconnect&quot;,&quot;ds&quot;,&quot;dynamodb&quot;,&quot;ec2&quot;,&quot;ecr&quot;,&quot;ecs&quot;,&quot;edgelambda&quot;,&quot;elasticache&quot;,&quot;elasticbeanstalk&quot;,&quot;elasticfilesystem&quot;,&quot;elasticloadbalancing&quot;,&quot;elasticmapreduce&quot;,&quot;events&quot;,&quot;health&quot;,&quot;iam&quot;,&quot;inspector&quot;,&quot;kinesis&quot;,&quot;kms&quot;,&quot;lambda&quot;,&quot;lightsail&quot;,&quot;logs&quot;,&quot;monitoring&quot;,&quot;opsworks&quot;,&quot;organizations&quot;,&quot;rds&quot;,&quot;redshift&quot;,&quot;route53&quot;,&quot;s3&quot;,&quot;servicecatalog&quot;,&quot;ses&quot;,&quot;signin&quot;,&quot;sns&quot;,&quot;sqs&quot;,&quot;ssm&quot;,&quot;storagegateway&quot;,&quot;sts&quot;,&quot;support&quot;,&quot;vmie&quot;,&quot;waf&quot;,&quot;workdocs&quot;,&quot;workspaces&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="ACCOUNT" expression="" defaultValue="&quot;!Ref 'AWS::AccountId'&quot;" alwaysStopAt="true" />
         <variable name="SERVICE" expression="" defaultValue="&quot;s3&quot;" alwaysStopAt="true" />
         <variable name="RESOURCE" expression="" defaultValue="" alwaysStopAt="true" />
@@ -865,9 +828,9 @@
         </context>
     </template>
     <template name="acmf" value="$NAME$:&#10;    Type: AWS::CertificateManager::Certificate&#10;    Properties:&#10;      DomainName: $DOMAIN$&#10;      SubjectAlternativeNames: $SAN$ &#10;      DomainValidationOptions: $DVO$&#10;      Tags: [$TAGS$]&#10;$END$" description="full ACM options" toReformat="true" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="SAN" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="NAME" expression="" defaultValue="&quot;SslCert&quot;" alwaysStopAt="true" />
+        <variable name="DOMAIN" expression="" defaultValue="&quot;!Ref Domain&quot;" alwaysStopAt="true" />
+        <variable name="SAN" expression="" defaultValue="&quot;!Ref AlternativeDomains&quot;" alwaysStopAt="true" />
         <variable name="DVO" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="TAGS" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
@@ -902,8 +865,8 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="ago" value="$API$InvokeUrl:&#10;  Description: Endpoint of the $API$ API&#10;  Value: !Sub 'https://${$START$}.execute-api.${AWS::Region}.amazonaws.com/$STAGE$'&#10;$END$" description="api gateway output" toReformat="true" toShortenFQNames="true">
-        <variable name="API" expression="" defaultValue="&quot;Api&quot;" alwaysStopAt="true" />
+    <template name="ago" value="$API$:&#10;  Description: Endpoint of the $API$ API&#10;  Value: !Sub 'https://${$START$}.execute-api.${AWS::Region}.amazonaws.com/$STAGE$'&#10;$END$" description="api gateway output" toReformat="true" toShortenFQNames="true">
+        <variable name="API" expression="" defaultValue="&quot;ApiInvokeUrl&quot;" alwaysStopAt="true" />
         <variable name="START" expression="" defaultValue="&quot;prefix&quot;" alwaysStopAt="true" />
         <variable name="STAGE" expression="" defaultValue="&quot;prod&quot;" alwaysStopAt="true" />
         <context>
@@ -1016,11 +979,12 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="cfrw" value="$NAME$CDN:&#10;  Type: AWS::CloudFront::Distribution&#10;  Properties:&#10;    DistributionConfig:&#10;      Enabled: true&#10;      Aliases: [!Ref $CERTIFICATE$]&#10;      ViewerCertificate:&#10;        AcmCertificateArn: !Ref SSLCertificate&#10;        SslSupportMethod: 'sni-only'&#10;      Origins:&#10;      -&#10;        Id: '$ORIGIN_ID$'&#10;        DomainName: !Sub '${$BUCKET$}.s3-website-${AWS::Region}.amazonaws.com'&#10;        CustomOriginConfig:&#10;          OriginProtocolPolicy: 'http-only'&#10;      DefaultCacheBehavior:&#10;        ViewerProtocolPolicy: 'redirect-to-https'&#10;        ForwardedValues:&#10;          QueryString: false&#10;          Cookies:&#10;            Forward: none&#10;        TargetOriginId: '$ORIGIN_ID$'&#10;        MinTTL: $MIN_TTL$&#10;        DefaultTTL: $DEFAULT_TTL$&#10;        Compress: true&#10;$END$" description="cloudfront distribution for an s3-backed website" toReformat="true" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="CERTIFICATE" expression="" defaultValue="&quot;SSLCertificate&quot;" alwaysStopAt="true" />
-        <variable name="ORIGIN_ID" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="BUCKET" expression="" defaultValue="" alwaysStopAt="true" />
+    <template name="cfrw" value="$NAME$:&#10;  Type: AWS::CloudFront::Distribution&#10;  Properties:&#10;    DistributionConfig:&#10;      Enabled: true&#10;      Aliases: [!Ref $DOMAIN$]&#10;      ViewerCertificate:&#10;        AcmCertificateArn: !Ref $CERT$&#10;        SslSupportMethod: 'sni-only'&#10;      Origins:&#10;      -&#10;        Id: '$ORIGIN_ID$'&#10;        DomainName: !Sub '${$BUCKET$}.s3-website-${AWS::Region}.amazonaws.com'&#10;        CustomOriginConfig:&#10;          OriginProtocolPolicy: 'http-only'&#10;      DefaultCacheBehavior:&#10;        ViewerProtocolPolicy: 'redirect-to-https'&#10;        ForwardedValues:&#10;          QueryString: true&#10;          Cookies:&#10;            Forward: none&#10;        TargetOriginId: '$ORIGIN_ID$'&#10;        MinTTL: $MIN_TTL$&#10;        DefaultTTL: $DEFAULT_TTL$&#10;        Compress: true&#10;$END$" description="cloudfront distribution for an s3-backed website" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="&quot;CDN&quot;" alwaysStopAt="true" />
+        <variable name="DOMAIN" expression="" defaultValue="&quot;Domain&quot;" alwaysStopAt="true" />
+        <variable name="CERT" expression="" defaultValue="&quot;SSLCertificate&quot;" alwaysStopAt="true" />
+        <variable name="ORIGIN_ID" expression="" defaultValue="&quot;main&quot;" alwaysStopAt="true" />
+        <variable name="BUCKET" expression="" defaultValue="&quot;Bucket&quot;" alwaysStopAt="true" />
         <variable name="MIN_TTL" expression="" defaultValue="&quot;31536000 # seconds in 1 year&quot;" alwaysStopAt="true" />
         <variable name="DEFAULT_TTL" expression="" defaultValue="&quot;31536000&quot;" alwaysStopAt="true" />
         <context>
@@ -1055,8 +1019,10 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="cwaf" value="$FN$:&#10;  Type: AWS::Lambda::Function&#10;  Properties:&#10;    Handler: index.handler&#10;    Runtime: python3.6&#10;    Role: !Sub '${$ROLE$.Arn}'&#10;    Code:&#10;      ZipFile: |&#10;        import json&#10;&#10;&#10;        def handler(event, context):&#10;            for record in event['Records']:&#10;                message = json.loads(record['Sns']['Message'])&#10;&#10;                alarm_name = message['AlarmName']&#10;                alarm_description = message['AlarmDescription']&#10;                account_id = message['AWSAccountId']&#10;                new_state = message['NewStateValue']&#10;                new_state_reason = message['NewStateReason']&#10;                state_timestamp = message['StateChangeTime']&#10;                region = message['Region']&#10;                old_state = message['OldStateValue']&#10;                print(&#10;                    'alarm_name: &quot;{}&quot; alarm_description: &quot;{}&quot; account_id: &quot;{}&quot; old_state: &quot;{}&quot; new_state: &quot;{}&quot; new_state_reason: &quot;{}&quot; state_timestamp: &quot;{}&quot; region: &quot;{}&quot;'.format(&#10;                          alarm_name, alarm_description, account_id, old_state, new_state, new_state_reason, state_timestamp,&#10;                          region))&#10;&#10;$ROLE$:&#10;  Type: AWS::IAM::Role&#10;  Properties:&#10;    AssumeRolePolicyDocument:&#10;      Statement:&#10;      - Action: 'sts:AssumeRole'&#10;        Effect: Allow&#10;        Principal:&#10;          Service: [lambda.amazonaws.com]&#10;    ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']&#10;&#10;Permission:&#10;  Type: AWS::Lambda::Permission&#10;  Properties:&#10;    FunctionName: !Ref $FN$&#10;    Action: 'lambda:InvokeFunction'&#10;    Principal: sns.amazonaws.com&#10;&#10;$NOTIF$:&#10;  Type: AWS::SNS::Topic&#10;  Properties:&#10;    Subscription:&#10;    - Endpoint: !Sub '${$FN$.Arn}'&#10;      Protocol: lambda&#10;&#10;Alarm:&#10;  Type: AWS::CloudWatch::Alarm&#10;  Properties:&#10;    OKActions: [!Ref $NOTIF$]&#10;    InsufficientDataActions: [!Ref $NOTIF$]&#10;    AlarmActions: [!Ref $NOTIF$]&#10;    # rest of properties, e.g: ComparisonOperator, Threshold, EvaluationPeriods, Period, MetricName, Namespace" description="a lambda-customised cloudwatch alarm" toReformat="false" toShortenFQNames="true">
+    <template name="cwaf" value="$FN$:&#10;  Type: AWS::Lambda::Function&#10;  Properties:&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    Role: !Sub '${$ROLE$.Arn}'&#10;    Code:&#10;      ZipFile: |&#10;        import json&#10;&#10;&#10;        def handler(event, context):&#10;            for record in event['Records']:&#10;                message = json.loads(record['Sns']['Message'])&#10;&#10;                alarm_name = message['AlarmName']&#10;                alarm_description = message['AlarmDescription']&#10;                account_id = message['AWSAccountId']&#10;                new_state = message['NewStateValue']&#10;                new_state_reason = message['NewStateReason']&#10;                state_timestamp = message['StateChangeTime']&#10;                region = message['Region']&#10;                old_state = message['OldStateValue']&#10;                print(&#10;                    'alarm_name: &quot;{}&quot; alarm_description: &quot;{}&quot; account_id: &quot;{}&quot; old_state: &quot;{}&quot; new_state: &quot;{}&quot; new_state_reason: &quot;{}&quot; state_timestamp: &quot;{}&quot; region: &quot;{}&quot;'.format(&#10;                          alarm_name, alarm_description, account_id, old_state, new_state, new_state_reason, state_timestamp,&#10;                          region))&#10;&#10;$ROLE$:&#10;  Type: AWS::IAM::Role&#10;  Properties:&#10;    AssumeRolePolicyDocument:&#10;      Statement:&#10;      - Action: 'sts:AssumeRole'&#10;        Effect: Allow&#10;        Principal:&#10;          Service: [lambda.amazonaws.com]&#10;    ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']&#10;&#10;Permission:&#10;  Type: AWS::Lambda::Permission&#10;  Properties:&#10;    FunctionName: !Ref $FN$&#10;    Action: 'lambda:InvokeFunction'&#10;    Principal: sns.amazonaws.com&#10;&#10;$NOTIF$:&#10;  Type: AWS::SNS::Topic&#10;  Properties:&#10;    Subscription:&#10;    - Endpoint: !Sub '${$FN$.Arn}'&#10;      Protocol: lambda&#10;&#10;Alarm:&#10;  Type: AWS::CloudWatch::Alarm&#10;  Properties:&#10;    OKActions: [!Ref $NOTIF$]&#10;    InsufficientDataActions: [!Ref $NOTIF$]&#10;    AlarmActions: [!Ref $NOTIF$]&#10;    # rest of properties, e.g: ComparisonOperator, Threshold, EvaluationPeriods, Period, MetricName, Namespace" description="a lambda-customised cloudwatch alarm" toReformat="false" toShortenFQNames="true">
         <variable name="FN" expression="" defaultValue="&quot;AlarmProcessorFn&quot;" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
         <variable name="ROLE" expression="" defaultValue="&quot;Role&quot;" alwaysStopAt="true" />
         <variable name="NOTIF" expression="" defaultValue="&quot;LambdaNotification&quot;" alwaysStopAt="true" />
         <context>
@@ -1211,7 +1177,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="iamu" value="$NAME$User:&#10;  Type: AWS::IAM::User&#10;  Properties:&#10;    UserName: $USERNAME$&#10;    ManagedPolicyArns: ['$ARN$']&#10;$END$" description="" toReformat="true" toShortenFQNames="true">
+    <template name="iamu" value="$NAME$User:&#10;  Type: AWS::IAM::User&#10;  Properties:&#10;    UserName: $USERNAME$&#10;    ManagedPolicyArns: ['$ARN$']&#10;$END$" description="iam user" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="USERNAME" expression="" defaultValue="NAME" alwaysStopAt="true" />
         <variable name="ARN" expression="" defaultValue="" alwaysStopAt="true" />
@@ -1247,7 +1213,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="l" value="$NAME$:&#10;  Type: AWS::Logs::LogGroup&#10;  Properties:&#10;    RetentionInDays: $DAYS$&#10;    LogGroupName: $LNAME$&#10;$END$" description="" toReformat="true" toShortenFQNames="true">
+    <template name="l1" value="$NAME$:&#10;  Type: AWS::Logs::LogGroup&#10;  Properties:&#10;    RetentionInDays: $DAYS$&#10;    LogGroupName: $LNAME$&#10;$END$" description="cloudwatch log group with retention and name" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Log&quot;" alwaysStopAt="true" />
         <variable name="DAYS" expression="" defaultValue="&quot;30&quot;" alwaysStopAt="true" />
         <variable name="LNAME" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
@@ -1283,7 +1249,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="l1" value="$NAME$:&#10;  Type: AWS::Logs::LogGroup&#10;$END$" description="" toReformat="true" toShortenFQNames="true">
+    <template name="l" value="$NAME$:&#10;  Type: AWS::Logs::LogGroup&#10;$END$" description="basic cloudwatch log group" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Log&quot;" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
@@ -1317,7 +1283,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="lm" value="$NAME$:&#10;  Type: AWS::Logs::MetricFilter&#10;  Properties:&#10;    LogGroupName: $LOG$&#10;    FilterPattern: '$PATTERN$'&#10;    MetricTransformations:&#10;    - MetricName: $M_NAME$&#10;      MetricNamespace: $M_NAMESPACE$&#10;      MetricValue: $M_VALUE$&#10;$END$" description="metric filter" toReformat="true" toShortenFQNames="true">
+    <template name="lm" value="$NAME$:&#10;  Type: AWS::Logs::MetricFilter&#10;  Properties:&#10;    LogGroupName: $LOG$&#10;    FilterPattern: '$PATTERN$'&#10;    MetricTransformations:&#10;    - MetricName: $M_NAME$&#10;      MetricNamespace: $M_NAMESPACE$&#10;      MetricValue: $M_VALUE$&#10;$END$" description="log metric filter" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Filter&quot;" alwaysStopAt="true" />
         <variable name="LOG" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="PATTERN" expression="" defaultValue="" alwaysStopAt="true" />
@@ -1356,7 +1322,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="lmf" value="$NAME$:&#10;  Type: AWS::Logs::MetricFilter&#10;  Properties:&#10;    LogGroupName: !Sub '/aws/lambda/${$FN$}'&#10;    FilterPattern: '[$PATTERN$]'&#10;    MetricTransformations:&#10;    - MetricName: $M_NAME$&#10;      MetricNamespace: $M_NAMESPACE$&#10;      MetricValue: $M_VALUE$&#10;$END$" description="metric filter for function" toReformat="true" toShortenFQNames="true">
+    <template name="lmf" value="$NAME$:&#10;  Type: AWS::Logs::MetricFilter&#10;  Properties:&#10;    LogGroupName: !Sub '/aws/lambda/${$FN$}'&#10;    FilterPattern: '[$PATTERN$]'&#10;    MetricTransformations:&#10;    - MetricName: $M_NAME$&#10;      MetricNamespace: $M_NAMESPACE$&#10;      MetricValue: $M_VALUE$&#10;$END$" description="metric filter for lambda function" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Filter&quot;" alwaysStopAt="true" />
         <variable name="FN" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
         <variable name="PATTERN" expression="" defaultValue="&quot;type=REPORT, ..., max_memory_used_mb, mb&quot;" alwaysStopAt="true" />
@@ -1397,7 +1363,7 @@
     </template>
     <template name="r" value="$NAME$:&#10;  Type: AWS::IAM::Role&#10;  Properties:&#10;    AssumeRolePolicyDocument:&#10;      Statement:&#10;      - Action: sts:AssumeRole&#10;        Effect: Allow&#10;        Principal:&#10;          Service: $SERVICE$.amazonaws.com&#10;    ManagedPolicyArns: ['$MANAGED_POLICIES$']&#10;    Policies:&#10;    - PolicyName: $POLICY_NAME$&#10;      PolicyDocument:&#10;        Version: 2012-10-17&#10;        Statement:&#10;        - Effect: Allow&#10;          Action: ['$ACTION$']&#10;          Resource: '$RESOURCE$'" description="" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Role&quot;" alwaysStopAt="true" />
-        <variable name="SERVICE" expression="" defaultValue="&quot;lambda&quot;" alwaysStopAt="true" />
+        <variable name="SERVICE" expression="enum(&quot;acm&quot;,&quot;apigateway&quot;,&quot;athena&quot;,&quot;autoscaling&quot;,&quot;clouddirectory&quot;,&quot;cloudformation&quot;,&quot;cloudfront&quot;,&quot;cloudsearch&quot;,&quot;cloudtrail&quot;,&quot;codecommit&quot;,&quot;codedeploy&quot;,&quot;codepipeline&quot;,&quot;config&quot;,&quot;datapipeline&quot;,&quot;directconnect&quot;,&quot;ds&quot;,&quot;dynamodb&quot;,&quot;ec2&quot;,&quot;ecr&quot;,&quot;ecs&quot;,&quot;edgelambda&quot;,&quot;elasticache&quot;,&quot;elasticbeanstalk&quot;,&quot;elasticfilesystem&quot;,&quot;elasticloadbalancing&quot;,&quot;elasticmapreduce&quot;,&quot;events&quot;,&quot;health&quot;,&quot;iam&quot;,&quot;inspector&quot;,&quot;kinesis&quot;,&quot;kms&quot;,&quot;lambda&quot;,&quot;lightsail&quot;,&quot;logs&quot;,&quot;monitoring&quot;,&quot;opsworks&quot;,&quot;organizations&quot;,&quot;rds&quot;,&quot;redshift&quot;,&quot;route53&quot;,&quot;s3&quot;,&quot;servicecatalog&quot;,&quot;ses&quot;,&quot;signin&quot;,&quot;sns&quot;,&quot;sqs&quot;,&quot;ssm&quot;,&quot;storagegateway&quot;,&quot;sts&quot;,&quot;support&quot;,&quot;vmie&quot;,&quot;waf&quot;,&quot;workdocs&quot;,&quot;workspaces&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="MANAGED_POLICIES" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="POLICY_NAME" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
         <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
@@ -1434,7 +1400,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="s3" value="OurBucket:&#10;  Type: AWS::S3::Bucket&#10;  Properties:&#10;    BucketName: $NAME$" description="" toReformat="true" toShortenFQNames="true">
+    <template name="s3" value="OurBucket:&#10;  Type: AWS::S3::Bucket&#10;  Properties:&#10;    BucketName: $NAME$" description="s3 bucket with name" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
@@ -1468,7 +1434,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="s3bp" value="$NAME$BucketPolicy:&#10;  Type: AWS::S3::BucketPolicy&#10;  Properties:&#10;    Bucket: !Ref $B_NAME$&#10;    PolicyDocument:&#10;      Version: '2008-10-17'&#10;      Statement:&#10;        -&#10;          Sid: $SID$&#10;          Effect: Allow&#10;          Principal:&#10;            AWS: $PRINCIPAL$$END$&#10;          Action: ['$ACTION$']&#10;          Resource: [!Sub 'arn:aws:s3:::${$RESOURCE$}/*']" description="s3 bucket policy" toReformat="true" toShortenFQNames="true">
+    <template name="s3bp" value="$NAME$BucketPolicy:&#10;  Type: AWS::S3::BucketPolicy&#10;  Properties:&#10;    Bucket: !Ref $B_NAME$&#10;    PolicyDocument:&#10;      Version: 2008-10-17&#10;      Statement:&#10;        -&#10;          Sid: $SID$&#10;          Effect: Allow&#10;          Principal:&#10;            AWS: $PRINCIPAL$$END$&#10;          Action: ['$ACTION$']&#10;          Resource: [!Sub 'arn:aws:s3:::${$RESOURCE$}/*']" description="s3 bucket policy" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="B_NAME" expression="" defaultValue="NAME" alwaysStopAt="true" />
         <variable name="SID" expression="" defaultValue="NAME" alwaysStopAt="true" />
@@ -1507,7 +1473,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="s3ef" value="-  Event: 's3:$EVENT$'&#10;   Function: !Sub '${$FN$.Arn}'&#10;   Filter:&#10;     S3Key:&#10;       Rules:&#10;       - Name: $NAME$&#10;         Value: $EXT$" description="" toReformat="true" toShortenFQNames="true">
+    <template name="s3ef" value="-  Event: 's3:$EVENT$'&#10;   Function: !Sub '${$FN$.Arn}'&#10;   Filter:&#10;     S3Key:&#10;       Rules:&#10;       - Name: $NAME$&#10;         Value: $EXT$" description="s3 event that calls a lambda function" toReformat="true" toShortenFQNames="true">
         <variable name="EVENT" expression="" defaultValue="&quot;ObjectCreated:*&quot;" alwaysStopAt="true" />
         <variable name="FN" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
         <variable name="NAME" expression="" defaultValue="&quot;suffix&quot;" alwaysStopAt="true" />
@@ -1651,10 +1617,10 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="asglc" value="$NAME$:&#10;  Type: AWS::AutoScaling::LaunchConfiguration&#10;  Properties:&#10;    ImageId: $IMG$&#10;    SecurityGroups: [!Ref $SG$]&#10;    InstanceType: $TYPE$&#10;    BlockDeviceMappings:&#10;    - DeviceName: '/dev/$EBS$'&#10;      Ebs:&#10;        VolumeSize: $SIZE$&#10;    - DeviceName: '/dev/$DEV$'&#10;      VirtualName: $VNAME$&#10;$END$" description="auto-scaling group launch configuration" toReformat="true" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="IMG" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="SG" expression="" defaultValue="" alwaysStopAt="true" />
+    <template name="asglc" value="$NAME$:&#10;  Type: AWS::AutoScaling::LaunchConfiguration&#10;  Properties:&#10;    ImageId: $IMG$&#10;    SecurityGroups: !Ref $SG$&#10;    InstanceType: $TYPE$&#10;    BlockDeviceMappings:&#10;    - DeviceName: '/dev/$EBS$'&#10;      Ebs:&#10;        VolumeSize: $SIZE$&#10;    - DeviceName: '/dev/$DEV$'&#10;      VirtualName: $VNAME$&#10;$END$" description="auto-scaling group launch configuration" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="&quot;LaunchConfig&quot;" alwaysStopAt="true" />
+        <variable name="IMG" expression="" defaultValue="&quot;ami-xxx&quot;" alwaysStopAt="true" />
+        <variable name="SG" expression="" defaultValue="&quot;SecurityGroups&quot;" alwaysStopAt="true" />
         <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="EBS" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="SIZE" expression="" defaultValue="" alwaysStopAt="true" />
@@ -2255,7 +2221,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="snsp" value="$NAME$:&#10;  Type: AWS::SNS::TopicPolicy&#10;  Properties:&#10;    PolicyDocument:&#10;      Id: $NAME2$&#10;      Version: '2012-10-17'&#10;      Statement:&#10;      - Sid: $NAME2$&#10;        Effect: Allow&#10;        Principal:&#10;          AWS: !Sub '${$USER$.Arn}'&#10;        Action: sns:Publish&#10;        Resource: '*'&#10;    Topics: [!Ref $TOPIC$]&#10;$END$" description="sns policy" toReformat="true" toShortenFQNames="true">
+    <template name="snsp" value="$NAME$:&#10;  Type: AWS::SNS::TopicPolicy&#10;  Properties:&#10;    PolicyDocument:&#10;      Id: $NAME2$&#10;      Version: 2012-10-17&#10;      Statement:&#10;      - Sid: $NAME2$&#10;        Effect: Allow&#10;        Principal:&#10;          AWS: !Sub '${$USER$.Arn}'&#10;        Action: sns:Publish&#10;        Resource: '*'&#10;    Topics: [!Ref $TOPIC$]&#10;$END$" description="sns policy" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;SnsPolicy&quot;" alwaysStopAt="true" />
         <variable name="NAME2" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
         <variable name="USER" expression="" defaultValue="&quot;User&quot;" alwaysStopAt="true" />
@@ -2292,7 +2258,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="sqsp" value="$NAME$:&#10;  Type: AWS::SQS::QueuePolicy&#10;  Properties:&#10;    PolicyDocument:&#10;      Id: $NAME2$&#10;      Version: '2012-10-17'&#10;      Statement:&#10;      - Sid: $NAME2$&#10;        Effect: Allow&#10;        Principal:&#10;          AWS: !Sub '${$USER$.Arn}'&#10;        Action: sqs:SendMessage&#10;        Resource: '*'&#10;    Queues: [!Ref $QUEUE$]&#10;$END$" description="sqs policy" toReformat="true" toShortenFQNames="true">
+    <template name="sqsp" value="$NAME$:&#10;  Type: AWS::SQS::QueuePolicy&#10;  Properties:&#10;    PolicyDocument:&#10;      Id: $NAME2$&#10;      Version: 2012-10-17&#10;      Statement:&#10;      - Sid: $NAME2$&#10;        Effect: Allow&#10;        Principal:&#10;          AWS: !Sub '${$USER$.Arn}'&#10;        Action: sqs:SendMessage&#10;        Resource: '*'&#10;    Queues: [!Ref $QUEUE$]&#10;$END$" description="sqs policy" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;SqsPolicy&quot;" alwaysStopAt="true" />
         <variable name="NAME2" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
         <variable name="USER" expression="" defaultValue="&quot;User&quot;" alwaysStopAt="true" />
@@ -2329,10 +2295,10 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="ns" value="$NAME$:&#10;  Type: AWS::CloudFormation::Stack&#10;  Properties:&#10;    TemplateURL: '$URL$'&#10;    TimeoutInMinutes: $TIME$&#10;    Parameters:&#10;      $END$&#10;" description="nested stack" toReformat="true" toShortenFQNames="true">
+    <template name="ns" value="$NAME$:&#10;  Type: AWS::CloudFormation::Stack&#10;  Properties:&#10;    TemplateURL: 'https://s3.amazonaws.com/$URL$'&#10;    TimeoutInMinutes: $TIME$&#10;    Parameters:&#10;      $END$&#10;" description="nested stack" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Stack&quot;" alwaysStopAt="true" />
         <variable name="URL" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="TIME" expression="" defaultValue="&quot;60&quot;" alwaysStopAt="true" />
+        <variable name="TIME" expression="" defaultValue="&quot;30&quot;" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
@@ -2374,7 +2340,7 @@
         <variable name="IMAGE" expression="concat(&quot;!Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/&quot;, FAMILY, &quot;:${Tag}&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="LOG_GROUP" expression="concat(NAME, &quot;LogGroup&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="C_PATH" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="PORT" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="PORT" expression="" defaultValue="&quot;80&quot;" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
@@ -2446,7 +2412,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="vpce" value="$NAME$:&#10;  Type: AWS::EC2::VPCEndpoint&#10;  Properties:&#10;    ServiceName: !Sub 'com.amazonaws.${AWS::Region}.$SERVICE$'&#10;    VpcId: !Ref $VPC$&#10;    RouteTableIds: [!Ref $RT$]&#10;$END$" description="vpc endpoint" toReformat="true" toShortenFQNames="true">
+    <template name="vpce" value="$NAME$:&#10;  Type: AWS::EC2::VPCEndpoint&#10;  Properties:&#10;    ServiceName: !Sub 'com.amazonaws.${AWS::Region}.$SERVICE$'&#10;    VpcId: !Ref $VPC$&#10;    RouteTableIds: !Ref $RT$&#10;$END$" description="vpc endpoint" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;VpcEndpoint&quot;" alwaysStopAt="true" />
         <variable name="SERVICE" expression="" defaultValue="&quot;s3&quot;" alwaysStopAt="true" />
         <variable name="VPC" expression="" defaultValue="&quot;Vpc&quot;" alwaysStopAt="true" />
@@ -2770,7 +2736,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="nat" value="NatGateway$NAME$:&#10;  Type: AWS::CloudFormation::Stack&#10;  Properties:&#10;    TemplateURL: 'https://s3-eu-west-1.amazonaws.com/widdix-aws-cf-templates-releases-eu-west-1/stable/vpc/vpc-nat-gateway.yaml'&#10;    Parameters:&#10;      SubnetZone: $ZONE$&#10;      ParentVPCStack: !Sub ${$VPC$.Outputs.StackName}&#10;$END$" description="nat gateway" toReformat="true" toShortenFQNames="true">
+    <template name="nat" value="NatGateway$NAME$:&#10;  Type: AWS::CloudFormation::Stack&#10;  Properties:&#10;    TemplateURL: 'https://s3-eu-west-1.amazonaws.com/widdix-aws-cf-templates-releases-eu-west-1/stable/vpc/vpc-nat-gateway.yaml'&#10;    Parameters:&#10;      SubnetZone: $ZONE$&#10;      ParentVPCStack: !Sub ${$VPC$.Outputs.StackName}&#10;$END$" description="nat gateway from cloudonaut" toReformat="true" toShortenFQNames="true">
         <variable name="ZONE" expression="enum(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="NAME" expression="" defaultValue="ZONE" alwaysStopAt="false" />
         <variable name="VPC" expression="" defaultValue="&quot;Vpc&quot;" alwaysStopAt="true" />
@@ -2842,7 +2808,7 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="vpc" value="$NAME$:&#10;  Type: AWS::CloudFormation::Stack&#10;  Properties:&#10;    TemplateURL: 'https://s3-eu-west-1.amazonaws.com/widdix-aws-cf-templates-releases-eu-west-1/stable/vpc/vpc-$COUNT$azs.yaml'&#10;    Parameters:&#10;      ClassB: $CLASS$ # 10.xxx.0.0/16&#10;      $COMMENT$" description="cloudonaut vpc" toReformat="true" toShortenFQNames="true">
+    <template name="vpc" value="$NAME$:&#10;  Type: AWS::CloudFormation::Stack&#10;  Properties:&#10;    TemplateURL: 'https://s3-eu-west-1.amazonaws.com/widdix-aws-cf-templates-releases-eu-west-1/stable/vpc/vpc-$COUNT$azs.yaml'&#10;    Parameters:&#10;      ClassB: $CLASS$ # 10.xxx.0.0/16&#10;      $COMMENT$" description="cloudonaut vpc with specified number of public and private subnets" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Vpc&quot;" alwaysStopAt="true" />
         <variable name="COUNT" expression="enum(&quot;2&quot;, &quot;3&quot;, &quot;4&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="CLASS" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
@@ -3032,10 +2998,13 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="micro" value="$NAME$Fn:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    Handler: index.handler&#10;    Runtime: $RUNTIME$&#10;    CodeUri: ./$FILE$&#10;    Environment:&#10;      Variables:&#10;        #key: !Ref Value&#10;    Events:&#10;      Api:&#10;        Type: Api&#10;        Properties:&#10;          Path: /$PATH$&#10;          Method: $METHOD$&#10;" description="microservice backed by http" toReformat="true" toShortenFQNames="true">
+    <template name="micro" value="$NAME$Fn:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    CodeUri: ./$FILE$&#10;    Environment:&#10;      Variables:&#10;        #key: !Ref Value&#10;    Events:&#10;      $EVENT$:&#10;        Type: $TYPE$&#10;        Properties:&#10;          Path: /$PATH$&#10;          Method: $METHOD$&#10;" description="microservice backed by http" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
         <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
+        <variable name="EVENT" expression="" defaultValue="TYPE" alwaysStopAt="true" />
+        <variable name="TYPE" expression="enum(&quot;Api&quot;, &quot;Schedule&quot;, &quot;S3&quot;, &quot;SNS&quot;, &quot;Kinesis&quot;, &quot;DynamoDB&quot;, &quot;CloudWatchEvent&quot;, &quot;IoTRule&quot;, &quot;AlexaSkill&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="PATH" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
         <variable name="METHOD" expression="enum(&quot;ANY&quot;, &quot;POST&quot;, &quot;GET&quot;, &quot;HEAD&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;PATCH&quot;, &quot;OPTIONS&quot;)" defaultValue="" alwaysStopAt="true" />
         <context>
