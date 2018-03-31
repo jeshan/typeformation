@@ -368,11 +368,11 @@
         </context>
     </template>
     <template name="p2" value="$NAME$:&#10;  Type: $TYPE$&#10;  AllowedValues: $VALUES$&#10;  Default: $DEFAULT$&#10;  Description: $DESCRIPTION$&#10;  $END$" description="parameter with allowed values" toReformat="true" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="NAME" expression="" defaultValue="&quot;Param&quot;" alwaysStopAt="true" />
         <variable name="TYPE" expression="enum(&quot;String&quot;, &quot;Number&quot;, &quot;List&lt;Number&gt;&quot;, &quot;CommaDelimitedList&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="VALUES" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="DEFAULT" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="DESCRIPTION" expression="" defaultValue="&quot;|&quot;" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
@@ -406,10 +406,10 @@
         </context>
     </template>
     <template name="p1" value="$NAME$:&#10;  Type: $TYPE$&#10;  Default: $DEFAULT$&#10;  Description: $DESCRIPTION$&#10;  $END$" description="basic parameter" toReformat="false" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="NAME" expression="" defaultValue="&quot;Param&quot;" alwaysStopAt="true" />
         <variable name="TYPE" expression="enum(&quot;String&quot;, &quot;Number&quot;, &quot;List&lt;Number&gt;&quot;, &quot;CommaDelimitedList&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="DEFAULT" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="DESCRIPTION" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="DESCRIPTION" expression="" defaultValue="&quot;|&quot;" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
@@ -3183,6 +3183,40 @@
         </context>
     </template>
     <template name="sece" value="CloudWatchEvent:&#10;  Type: CloudWatchEvent&#10;  Properties:&#10;    Pattern:&#10;      detail:&#10;        $END$" description="serverless cloudwatch event event" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="suba" value="!Sub '${$RESOURCE$}.Arn'" description="substitute, using arn" toReformat="false" toShortenFQNames="true">
+        <variable name="RESOURCE" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
