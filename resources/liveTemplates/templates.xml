@@ -27,6 +27,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -64,6 +65,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -99,6 +101,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -144,6 +147,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -178,6 +182,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -217,6 +222,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -258,6 +264,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -295,6 +302,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -328,6 +336,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -362,6 +371,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -400,6 +410,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -437,6 +448,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -470,6 +482,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -503,6 +516,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -539,6 +553,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -574,6 +589,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -607,6 +623,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -644,6 +661,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -677,6 +695,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -711,6 +730,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -748,6 +768,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -786,6 +807,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -821,6 +843,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -859,6 +882,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -895,6 +919,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -937,6 +962,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -973,6 +999,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1013,6 +1040,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1051,6 +1079,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1092,6 +1121,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1130,6 +1160,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1171,6 +1202,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1207,6 +1239,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1243,6 +1276,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1277,6 +1311,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1316,6 +1351,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1355,6 +1391,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1394,6 +1431,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1428,6 +1466,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1467,6 +1506,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1504,6 +1544,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1540,6 +1581,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1575,6 +1617,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1611,6 +1654,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1652,6 +1696,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1690,6 +1735,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1727,6 +1773,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1764,6 +1811,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1808,6 +1856,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1846,6 +1895,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1881,6 +1931,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1921,6 +1972,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1960,6 +2012,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -1995,6 +2048,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2031,6 +2085,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2067,6 +2122,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2105,6 +2161,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2139,6 +2196,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2173,6 +2231,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2215,6 +2274,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2252,6 +2312,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2289,6 +2350,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2325,6 +2387,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2367,6 +2430,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2406,6 +2470,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2443,6 +2508,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2478,6 +2544,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2512,6 +2579,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2547,6 +2615,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2588,6 +2657,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2624,6 +2694,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2657,6 +2728,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2692,6 +2764,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2730,6 +2803,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2766,6 +2840,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2802,6 +2877,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2839,6 +2915,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2874,6 +2951,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2909,6 +2987,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2950,6 +3029,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -2992,6 +3072,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -3033,6 +3114,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -3069,6 +3151,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -3106,6 +3189,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -3140,6 +3224,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -3177,6 +3262,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -3210,6 +3296,7 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
@@ -3244,6 +3331,85 @@
             <option name="SCALA" value="false" />
             <option name="SQL" value="false" />
             <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="st" value="AWSTemplateFormatVersion: '2010-09-09'&#10;Description: '$DESC$'&#10;&#10;Parameters:&#10;  &#10;Resources:&#10;  $END$" description="Starts a cloudformation yaml file" toReformat="true" toShortenFQNames="true">
+        <variable name="DESC" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="bas" value="$BASTION$:&#10;  Type: AWS::CloudFormation::Stack&#10;  Properties:&#10;    TemplateURL: 'https://s3.amazonaws.com/stelligent-public/cloudformation-templates/github/bastion.yml'&#10;    TimeoutInMinutes: 20&#10;    Parameters:&#10;      Owner: $OWNER$&#10;      Project: Bastion&#10;      DeleteAfter: Never&#10;      Ec2KeyPair: !Ref KeyName&#10;      InstanceType: $TYPE$&#10;      InternalAccessSecurityGroup: !Ref $SG$&#10;      InstallChefdk: false&#10;      PublicNetworkAcl: !Ref $ACL$&#10;      VPC: !Ref $VPC$&#10;      PublicSubnet: !Ref $SUBNET$&#10;      OsType: $OS$&#10;      NetworkAccessIP: $IP$" description="stelligent bastion host" toReformat="true" toShortenFQNames="true">
+        <variable name="BASTION" expression="" defaultValue="&quot;Bastion&quot;" alwaysStopAt="true" />
+        <variable name="OWNER" expression="user()" defaultValue="" alwaysStopAt="true" />
+        <variable name="TYPE" expression="enum(&quot;t2.nano&quot;, &quot;t2.micro&quot;, &quot;t2.small&quot;, &quot;t2.medium&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="SG" expression="" defaultValue="&quot;SecurityGroup&quot;" alwaysStopAt="true" />
+        <variable name="ACL" expression="" defaultValue="&quot;Acl&quot;" alwaysStopAt="true" />
+        <variable name="VPC" expression="" defaultValue="&quot;VPC&quot;" alwaysStopAt="true" />
+        <variable name="SUBNET" expression="" defaultValue="&quot;Subnet&quot;" alwaysStopAt="true" />
+        <variable name="OS" expression="enum(&quot;amazon&quot;, &quot;centos&quot;, &quot;rhel&quot;, &quot;suse&quot;, &quot;ubuntu&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="IP" expression="" defaultValue="&quot;0.0.0.0/0&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TYPEFORMATION" value="false" />
             <option name="TypeScript" value="false" />
             <option name="XML" value="false" />
             <option name="sbt" value="false" />
