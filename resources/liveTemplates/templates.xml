@@ -716,12 +716,11 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="cwes" value="$NAME$:&#10;  Type: Schedule&#10;  Properties:&#10;    Schedule: rate($COUNT$ $PERIOD$)&#10;    Input: !Sub '{&quot;$KEY$&quot;: &quot;${$VALUE$}&quot;}'" description="cloudwatch event schedule" toReformat="true" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="&quot;Event&quot;" alwaysStopAt="true" />
+    <template name="sesch" value="Schedule:&#10;  Type: Schedule&#10;  Properties:&#10;    Schedule: rate($COUNT$ $PERIOD$)&#10;    Input: !Sub '{&quot;$KEY$&quot;: &quot;${$VALUE$}&quot;}'" description="serverless event schedule" toReformat="true" toShortenFQNames="true">
         <variable name="COUNT" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
-        <variable name="PERIOD" expression="" defaultValue="&quot;day&quot;" alwaysStopAt="true" />
-        <variable name="KEY" expression="" defaultValue="&quot;input&quot;" alwaysStopAt="true" />
-        <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="PERIOD" expression="enum(&quot;minute&quot;, &quot;minutes&quot;, &quot;hour&quot;, &quot;hours&quot;, &quot;day&quot;, &quot;days&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="KEY" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+        <variable name="VALUE" expression="" defaultValue="&quot;val&quot;" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
@@ -1474,7 +1473,7 @@
         </context>
     </template>
     <template name="s3ef" value="-  Event: 's3:$EVENT$'&#10;   Function: !Sub '${$FN$.Arn}'&#10;   Filter:&#10;     S3Key:&#10;       Rules:&#10;       - Name: $NAME$&#10;         Value: $EXT$" description="s3 event that calls a lambda function" toReformat="true" toShortenFQNames="true">
-        <variable name="EVENT" expression="" defaultValue="&quot;ObjectCreated:*&quot;" alwaysStopAt="true" />
+        <variable name="EVENT" expression="enum(&quot;ObjectCreated:*&quot;,&quot;ObjectCreated:Put&quot;,&quot;ObjectCreated:Post&quot;,&quot;ObjectCreated:Copy&quot;,&quot;ObjectCreated:CompleteMultipartUpload&quot;,&quot;ObjectRemoved:*&quot;,&quot;ObjectRemoved:Delete&quot;,&quot;ObjectRemoved:DeleteMarkerCreated&quot;,&quot;ReducedRedundancyLostObject&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FN" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
         <variable name="NAME" expression="" defaultValue="&quot;suffix&quot;" alwaysStopAt="true" />
         <variable name="EXT" expression="" defaultValue="&quot;.ext&quot;" alwaysStopAt="true" />
@@ -3001,12 +3000,189 @@
     <template name="micro" value="$NAME$Fn:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    CodeUri: ./$FILE$&#10;    Environment:&#10;      Variables:&#10;        #key: !Ref Value&#10;    Events:&#10;      $EVENT$:&#10;        Type: $TYPE$&#10;        Properties:&#10;          Path: /$PATH$&#10;          Method: $METHOD$&#10;" description="microservice backed by http" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
         <variable name="EVENT" expression="" defaultValue="TYPE" alwaysStopAt="true" />
         <variable name="TYPE" expression="enum(&quot;Api&quot;, &quot;Schedule&quot;, &quot;S3&quot;, &quot;SNS&quot;, &quot;Kinesis&quot;, &quot;DynamoDB&quot;, &quot;CloudWatchEvent&quot;, &quot;IoTRule&quot;, &quot;AlexaSkill&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="PATH" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
         <variable name="METHOD" expression="enum(&quot;ANY&quot;, &quot;POST&quot;, &quot;GET&quot;, &quot;HEAD&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;PATCH&quot;, &quot;OPTIONS&quot;)" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="sek" value="Kinesis:&#10;  Type: Kinesis&#10;  Properties:&#10;    Stream: !Sub '${$STREAM$.Arn}'&#10;    StartingPosition: $POS$&#10;    BatchSize: $SIZE$" description="serverless kinesis event" toReformat="true" toShortenFQNames="true">
+        <variable name="STREAM" expression="" defaultValue="&quot;Stream&quot;" alwaysStopAt="true" />
+        <variable name="POS" expression="enum(&quot;TRIM_HORIZON&quot;, &quot;LATEST&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="SIZE" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="ses3" value="S3:&#10;  Bucket: !Ref $BUCKET$&#10;  Events: ['$EVENT$']&#10;  Filter:&#10;    S3Key:&#10;      Rules:&#10;      - Name: $NAME$&#10;        Value: $EXT$" description="serverless s3 event" toReformat="true" toShortenFQNames="true">
+        <variable name="BUCKET" expression="" defaultValue="&quot;Bucket&quot;" alwaysStopAt="true" />
+        <variable name="EVENT" expression="enum(&quot;ObjectCreated:*&quot;,&quot;ObjectCreated:Put&quot;,&quot;ObjectCreated:Post&quot;,&quot;ObjectCreated:Copy&quot;,&quot;ObjectCreated:CompleteMultipartUpload&quot;,&quot;ObjectRemoved:*&quot;,&quot;ObjectRemoved:Delete&quot;,&quot;ObjectRemoved:DeleteMarkerCreated&quot;,&quot;ReducedRedundancyLostObject&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="NAME" expression="enum(&quot;suffix&quot;, &quot;prefix&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="EXT" expression="enum(&quot;prefix/&quot;, &quot;.ext&quot;)" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="sesns" value="SNS:&#10;  Type: SNS&#10;  Properties:&#10;    Topic: !Ref $TOPIC$" description="serverless sns event" toReformat="true" toShortenFQNames="true">
+        <variable name="TOPIC" expression="" defaultValue="&quot;Topic&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="s3dy" value="DynamoDB:&#10;  Type: DynamoDB&#10;  Properties:&#10;    Stream: !Sub 'arn:aws:dynamodb:${AWS:Region}:${AWS:AccountId}:table/${$TABLE$}/stream/$STREAM$'&#10;    StartingPosition: $POS$&#10;    BatchSize: $SIZE$" description="serverless dynamodb event" toReformat="true" toShortenFQNames="true">
+        <variable name="TABLE" expression="" defaultValue="&quot;Table&quot;" alwaysStopAt="true" />
+        <variable name="STREAM" expression="" defaultValue="&quot;yyyy-MM-ddTHH:mm:ss.SSS&quot;" alwaysStopAt="true" />
+        <variable name="POS" expression="enum(&quot;TRIM_HORIZON&quot;, &quot;LATEST&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="SIZE" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="sece" value="CloudWatchEvent:&#10;  Type: CloudWatchEvent&#10;  Properties:&#10;    Pattern:&#10;      detail:&#10;        $END$" description="serverless cloudwatch event event" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
