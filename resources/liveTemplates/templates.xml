@@ -938,11 +938,12 @@
             <option name="sbt" value="false" />
         </context>
     </template>
-    <template name="cbf" value="$NAME$Project:&#10;  Type: AWS::CodeBuild::Project&#10;  Properties:&#10;    Artifacts:&#10;      Type: $ARTEFACT$&#10;    Description: $DESC$&#10;    Environment:&#10;      ComputeType: BUILD_GENERAL1_MEDIUM&#10;      Image: 'aws/codebuild/$IMAGE$'&#10;      Type: LINUX_CONTAINER&#10;      #EnvironmentVariables:&#10;      #- Name: KEY&#10;        #Value: VALUE&#10;    Name: '$ENV_NAME$'&#10;    ServiceRole: !Sub '${$ROLE_NAME$ServiceRole.Arn}'&#10;    Source:&#10;      Type: $SOURCE$&#10;    TimeoutInMinutes: $TIMEOUT$" description="codebuild project" toReformat="true" toShortenFQNames="true">
+    <template name="cbf" value="$NAME$Project:&#10;  Type: AWS::CodeBuild::Project&#10;  Properties:&#10;    Artifacts:&#10;      Type: $ARTEFACT$&#10;    Description: '$DESC$'&#10;    Environment:&#10;      ComputeType: BUILD_GENERAL1_$SIZE$&#10;      Image: 'aws/codebuild/$IMAGE$'&#10;      Type: LINUX_CONTAINER&#10;      #EnvironmentVariables:&#10;      #- Name: KEY&#10;        #Value: VALUE&#10;    Name: '$ENV_NAME$'&#10;    ServiceRole: !Sub '${$ROLE_NAME$ServiceRole.Arn}'&#10;    Source:&#10;      Type: $SOURCE$&#10;    TimeoutInMinutes: $TIMEOUT$" description="codebuild project with AWS-managed images" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Build&quot;" alwaysStopAt="true" />
         <variable name="ARTEFACT" expression="" defaultValue="&quot;CODEPIPELINE&quot;" alwaysStopAt="true" />
         <variable name="DESC" expression="concat(&quot;Builds &quot;, NAME, &quot; project&quot;)" defaultValue="" alwaysStopAt="true" />
-        <variable name="IMAGE" expression="" defaultValue="&quot;android-java-8:24.4.1&quot;" alwaysStopAt="true" />
+        <variable name="SIZE" expression="enum(&quot;SMALL&quot;, &quot;MEDIUM&quot;, &quot;LARGE&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="IMAGE" expression="enum(&quot;docker:17.09.0&quot;, &quot;ubuntu-base:14.04&quot;, &quot;android-java-8:24.4.1&quot;,&quot;golang:1.10&quot;,&quot;java:openjdk-8&quot;,&quot;java:openjdk-9&quot;,&quot;nodejs:6.3.1&quot;,&quot;php:7.0&quot;,&quot;python:3.5.2&quot;,&quot;dot-net:core-2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="ENV_NAME" expression="" defaultValue="NAME" alwaysStopAt="true" />
         <variable name="ROLE_NAME" expression="" defaultValue="NAME" alwaysStopAt="true" />
         <variable name="SOURCE" expression="" defaultValue="ARTEFACT" alwaysStopAt="true" />
@@ -980,7 +981,7 @@
         </context>
     </template>
     <template name="cc" value="$NAME$Repo:&#10;  Type: AWS::CodeCommit::Repository&#10;  Properties:&#10;    RepositoryName: '$R_NAME$'&#10;    RepositoryDescription: '$DESC$'" description="Code commit repo" toReformat="true" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="NAME" expression="" defaultValue="&quot;Project&quot;" alwaysStopAt="true" />
         <variable name="R_NAME" expression="" defaultValue="NAME" alwaysStopAt="true" />
         <variable name="DESC" expression="concat(&quot;Git repo for the &quot;, NAME, &quot; project)" defaultValue="" alwaysStopAt="true" />
         <context>
@@ -2999,6 +3000,44 @@
         <variable name="SUBNET" expression="" defaultValue="&quot;Subnet&quot;" alwaysStopAt="true" />
         <variable name="TIMEOUT" expression="" defaultValue="&quot;30&quot;" alwaysStopAt="true" />
         <variable name="OWNER" expression="enum(&quot;root&quot;, &quot;user/${User}&quot;, &quot;group/${Group}&quot;, &quot;role/${Role}&quot;)" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="ACTION_SCRIPT" value="false" />
+            <option name="ASPECTJ" value="false" />
+            <option name="Bash" value="false" />
+            <option name="CSS" value="false" />
+            <option name="CUCUMBER_FEATURE_FILE" value="false" />
+            <option name="CoffeeScript" value="false" />
+            <option name="ColdFusion" value="false" />
+            <option name="Django" value="false" />
+            <option name="GROOVY" value="false" />
+            <option name="GSP" value="false" />
+            <option name="HAML" value="false" />
+            <option name="HTML" value="false" />
+            <option name="Handlebars" value="false" />
+            <option name="JAVA_CODE" value="false" />
+            <option name="JAVA_SCRIPT" value="false" />
+            <option name="JSON" value="false" />
+            <option name="JSP" value="false" />
+            <option name="KOTLIN" value="false" />
+            <option name="MAVEN" value="false" />
+            <option name="MXML" value="false" />
+            <option name="OTHER" value="true" />
+            <option name="Python" value="false" />
+            <option name="REQUEST" value="false" />
+            <option name="SCALA" value="false" />
+            <option name="SQL" value="false" />
+            <option name="SSP" value="false" />
+            <option name="TypeScript" value="false" />
+            <option name="XML" value="false" />
+            <option name="sbt" value="false" />
+        </context>
+    </template>
+    <template name="micro" value="$NAME$Fn:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    Handler: index.handler&#10;    Runtime: $RUNTIME$&#10;    CodeUri: ./$FILE$&#10;    Environment:&#10;      Variables:&#10;        #key: !Ref Value&#10;    Events:&#10;      Api:&#10;        Type: Api&#10;        Properties:&#10;          Path: /$PATH$&#10;          Method: $METHOD$&#10;" description="microservice backed by http" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
+        <variable name="PATH" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
+        <variable name="METHOD" expression="enum(&quot;ANY&quot;, &quot;POST&quot;, &quot;GET&quot;, &quot;HEAD&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;PATCH&quot;, &quot;OPTIONS&quot;)" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="ACTION_SCRIPT" value="false" />
             <option name="ASPECTJ" value="false" />
