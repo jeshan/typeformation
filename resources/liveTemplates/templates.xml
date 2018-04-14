@@ -779,7 +779,7 @@
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
-    <template name="suba" value="!Sub '${$RESOURCE$}.Arn'" description="substitute, using arn" toReformat="false" toShortenFQNames="true">
+    <template name="suba" value="!Sub '${$RESOURCE$.Arn}'" description="substitute, using arn" toReformat="false" toShortenFQNames="true">
         <variable name="RESOURCE" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="TYPEFORMATION" value="true" />
