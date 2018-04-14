@@ -1,4 +1,4 @@
-<templateSet group="hola">
+<templateSet group="TypeFormation">
     <template name="ts" value="Transform: AWS::Serverless-2016-10-31&#10;" description="transform serverless" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="TYPEFORMATION" value="true" />
@@ -801,6 +801,21 @@
         <variable name="SUBNET" expression="" defaultValue="&quot;Subnet&quot;" alwaysStopAt="true" />
         <variable name="OS" expression="enum(&quot;amazon&quot;, &quot;centos&quot;, &quot;rhel&quot;, &quot;suse&quot;, &quot;ubuntu&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="IP" expression="" defaultValue="&quot;0.0.0.0/0&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="TYPEFORMATION" value="true" />
+        </context>
+    </template>
+    <template name="mu" value="Ubuntu16.04LTS:&#10;  us-gov-west-1:&#10;    x64: ami-fb77e29a&#10;  cn-north-1:&#10;    x64: ami-a209d6cf&#10;  eu-west-3:&#10;    x64: ami-9a03b5e7&#10;  us-east-2:&#10;    x64: ami-e82a1a8d&#10;  sa-east-1:&#10;    x64: ami-5782d43b&#10;  eu-central-1:&#10;    x64: ami-cd491726&#10;  us-west-1:&#10;    x64: ami-493f2f29&#10;  us-west-2:&#10;    x64: ami-ca89eeb2&#10;  ap-northeast-2:&#10;    x64: ami-633d920d&#10;  ca-central-1:&#10;    x64: ami-9d7afcf9&#10;  eu-west-2:&#10;    x64: ami-506e8f37&#10;  ap-southeast-1:&#10;    x64: ami-82c9ecfe&#10;  eu-west-1:&#10;    x64: ami-74e6b80d&#10;  ap-southeast-2:&#10;    x64: ami-2b12dc49&#10;  ap-northeast-1:&#10;    x64: ami-60a4b21c&#10;  us-east-1:&#10;    x64: ami-6dfe5010&#10;  ap-northeast-3:&#10;    x64: ami-89c3cdf4&#10;  ap-south-1:&#10;    x64: ami-dba580b4" description="mapping ubuntu 16.04 LTS (64-bit, ebs, hvm, vendor)" toReformat="false" toShortenFQNames="false">
+        <context>
+            <option name="TYPEFORMATION" value="true" />
+        </context>
+    </template>
+    <template name="mc" value="CentOS7:&#10;  ap-northeast-1:&#10;    x64: ami-25bd2743&#10;  ap-northeast-2:&#10;    x64: ami-7248e81c&#10;  ap-south-1:&#10;    x64: ami-5d99ce32&#10;  ap-southeast-1:&#10;    x64: ami-d2fa88ae&#10;  ap-southeast-2:&#10;    x64: ami-b6bb47d4&#10;  ca-central-1:&#10;    x64: ami-dcad28b8&#10;  eu-central-1:&#10;    x64: ami-337be65c&#10;  eu-west-1:&#10;    x64: ami-6e28b517&#10;  eu-west-2:&#10;    x64: ami-ee6a718a&#10;  eu-west-3:&#10;    x64: ami-bfff49c2&#10;  sa-east-1:&#10;    x64: ami-f9adef95&#10;  us-east-1:&#10;    x64: ami-4bf3d731&#10;  us-east-2:&#10;    x64: ami-e1496384&#10;  us-west-1:&#10;    x64: ami-65e0e305&#10;  us-west-2:&#10;    x64: ami-a042f4d8" description="centos 7 updated 14/01/2018 (64-bit, ebs, hvm, vendor)" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="TYPEFORMATION" value="true" />
+        </context>
+    </template>
+    <template name="ma" value="AmazonLinux:&#10;  us-east-1:&#10;    value: ami-97785bed&#10;  us-east-2:&#10;    value: ami-f63b1193&#10;  us-west-2:&#10;   value: ami-f2d3638a&#10;  us-west-1:&#10;    value: ami-824c4ee2&#10;  ca-central-1:&#10;    value: ami-a954d1cd&#10;  eu-west-1:&#10;    value: ami-d834aba1&#10;  eu-west-2:&#10;    value: ami-403e2524&#10;  eu-west-3:&#10;    value: ami-8ee056f3&#10;  eu-central-1:&#10;    value: ami-5652ce39&#10;  ap-southeast-1:&#10;    value: ami-68097514&#10;  ap-northeast-2:&#10;    value: ami-863090e8&#10;  ap-northeast-1:&#10;    value: ami-ceafcba8&#10;  ap-southeast-2:&#10;    value: ami-942dd1f6&#10;  ap-south-1:&#10;    value: ami-531a4c3c&#10;  sa-east-1:&#10;    value: ami-84175ae8&#10;  cn-north-1:&#10;    value: ami-cb19c4a6&#10;  us-gov-west-1:&#10;    value: ami-56f87137" description="Amazon Linux AMI 2017.09.1 was released on 2018-01-17" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="TYPEFORMATION" value="true" />
         </context>
