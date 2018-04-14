@@ -182,7 +182,7 @@
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
-    <template name="acmf" value="$NAME$:&#10;    Type: AWS::CertificateManager::Certificate&#10;    Properties:&#10;      DomainName: $DOMAIN$&#10;      SubjectAlternativeNames: $SAN$ &#10;      DomainValidationOptions: $DVO$&#10;      Tags: [$TAGS$]&#10;$END$" description="full ACM options" toReformat="true" toShortenFQNames="true">
+    <template name="acmf" value="$NAME$:&#10;    Type: AWS::CertificateManager::Certificate&#10;    Properties:&#10;  DomainName: $DOMAIN$&#10;  SubjectAlternativeNames: $SAN$ &#10;  DomainValidationOptions: $DVO$&#10;  Tags: [$TAGS$]&#10;$END$" description="full ACM options" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;SslCert&quot;" alwaysStopAt="true" />
         <variable name="DOMAIN" expression="" defaultValue="&quot;!Ref Domain&quot;" alwaysStopAt="true" />
         <variable name="SAN" expression="" defaultValue="&quot;!Ref AlternativeDomains&quot;" alwaysStopAt="true" />
@@ -729,7 +729,7 @@
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
-    <template name="micro" value="$NAME$Fn:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    CodeUri: ./$FILE$&#10;    Environment:&#10;      Variables:&#10;        #key: !Ref Value&#10;    Events:&#10;      $EVENT$:&#10;        Type: $TYPE$&#10;        Properties:&#10;          Path: /$PATH$&#10;          Method: $METHOD$&#10;" description="microservice backed by http" toReformat="true" toShortenFQNames="true">
+    <template name="micro" value="$NAME$Fn:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    CodeUri: ./$FILE$&#10;    Environment:&#10;      Variables:&#10;        #key: !Ref Value&#10;    Events:&#10;      $EVENT$:&#10;        Type: $TYPE$&#10;        Properties:&#10;  Path: /$PATH$&#10;  Method: $METHOD$&#10;" description="microservice backed by http" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
         <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
