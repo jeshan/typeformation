@@ -6,16 +6,16 @@
     </template>
     <template name="fn" value="$NAME$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$FILE$&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;" description="serverless function" toReformat="false" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs8.10&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
-        <variable name="HANDLER" expression="" defaultValue="&quot;.handler&quot;" alwaysStopAt="true" />
+        <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
         <context>
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
     <template name="fnp" value="$NAME$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$END$.py&#10;    Handler: index.handler&#10;    Runtime: $RUNTIME$&#10;" description="simple serverless python 3 function" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs8.10&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="TYPEFORMATION" value="true" />
         </context>
@@ -45,7 +45,7 @@
     </template>
     <template name="fn1" value="$RESOURCE$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$FILE$&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    MemorySize: $MEMORY$&#10;    Timeout: $TIMEOUT$" description="" toReformat="true" toShortenFQNames="true">
         <variable name="RESOURCE" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs8.10&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
         <variable name="MEMORY" expression="" defaultValue="&quot;128&quot;" alwaysStopAt="true" />
@@ -56,7 +56,7 @@
     </template>
     <template name="fn2" value="$RESOURCE$:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    CodeUri: ./$FILE$&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    FunctionName: $FN_NAME$&#10;    MemorySize: $MEMORY$&#10;    Timeout: $TIMEOUT$&#10;    ReservedConcurrentExecutions: $CONCURRENT$" description="" toReformat="true" toShortenFQNames="true">
         <variable name="RESOURCE" expression="" defaultValue="&quot;Fn&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs8.10&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
         <variable name="FN_NAME" expression="" defaultValue="&quot;fn&quot;" alwaysStopAt="true" />
@@ -182,12 +182,11 @@
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
-    <template name="acmf" value="$NAME$:&#10;    Type: AWS::CertificateManager::Certificate&#10;    Properties:&#10;  DomainName: $DOMAIN$&#10;  SubjectAlternativeNames: $SAN$ &#10;  DomainValidationOptions: $DVO$&#10;  Tags: [$TAGS$]&#10;$END$" description="full ACM options" toReformat="true" toShortenFQNames="true">
-        <variable name="NAME" expression="" defaultValue="&quot;SslCert&quot;" alwaysStopAt="true" />
-        <variable name="DOMAIN" expression="" defaultValue="&quot;!Ref Domain&quot;" alwaysStopAt="true" />
-        <variable name="SAN" expression="" defaultValue="&quot;!Ref AlternativeDomains&quot;" alwaysStopAt="true" />
-        <variable name="DVO" expression="" defaultValue="" alwaysStopAt="true" />
-        <variable name="TAGS" expression="" defaultValue="" alwaysStopAt="true" />
+    <template name="acmf" value="SslCert:&#10;  Type: AWS::CertificateManager::Certificate&#10;  Properties:&#10;    DomainName: !Ref Domain&#10;    SubjectAlternativeNames: !Ref AlternativeDomains&#10;    DomainValidationOptions:&#10;    - DomainName: $V_N$&#10;      ValidationDomain: $V_D$&#10;    Tags:&#10;    - Key: $TAG_K$&#10;      Value: $TAG_V$" description="ACM with more options" toReformat="true" toShortenFQNames="true">
+        <variable name="V_N" expression="" defaultValue="&quot;!Sub hello.${Domain}&quot;" alwaysStopAt="true" />
+        <variable name="V_D" expression="" defaultValue="&quot;example.com&quot;" alwaysStopAt="true" />
+        <variable name="TAG_K" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+        <variable name="TAG_V" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
         <context>
             <option name="TYPEFORMATION" value="true" />
         </context>
@@ -236,7 +235,7 @@
     </template>
     <template name="cwaf" value="$FN$:&#10;  Type: AWS::Lambda::Function&#10;  Properties:&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    Role: !Sub '${$ROLE$.Arn}'&#10;    Code:&#10;      ZipFile: |&#10;        import json&#10;&#10;&#10;        def handler(event, context):&#10;            for record in event['Records']:&#10;                message = json.loads(record['Sns']['Message'])&#10;&#10;                alarm_name = message['AlarmName']&#10;                alarm_description = message['AlarmDescription']&#10;                account_id = message['AWSAccountId']&#10;                new_state = message['NewStateValue']&#10;                new_state_reason = message['NewStateReason']&#10;                state_timestamp = message['StateChangeTime']&#10;                region = message['Region']&#10;                old_state = message['OldStateValue']&#10;                print(&#10;                    'alarm_name: &quot;{}&quot; alarm_description: &quot;{}&quot; account_id: &quot;{}&quot; old_state: &quot;{}&quot; new_state: &quot;{}&quot; new_state_reason: &quot;{}&quot; state_timestamp: &quot;{}&quot; region: &quot;{}&quot;'.format(&#10;                          alarm_name, alarm_description, account_id, old_state, new_state, new_state_reason, state_timestamp,&#10;                          region))&#10;&#10;$ROLE$:&#10;  Type: AWS::IAM::Role&#10;  Properties:&#10;    AssumeRolePolicyDocument:&#10;      Statement:&#10;      - Action: 'sts:AssumeRole'&#10;        Effect: Allow&#10;        Principal:&#10;          Service: [lambda.amazonaws.com]&#10;    ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']&#10;&#10;Permission:&#10;  Type: AWS::Lambda::Permission&#10;  Properties:&#10;    FunctionName: !Ref $FN$&#10;    Action: 'lambda:InvokeFunction'&#10;    Principal: sns.amazonaws.com&#10;&#10;$NOTIF$:&#10;  Type: AWS::SNS::Topic&#10;  Properties:&#10;    Subscription:&#10;    - Endpoint: !Sub '${$FN$.Arn}'&#10;      Protocol: lambda&#10;&#10;Alarm:&#10;  Type: AWS::CloudWatch::Alarm&#10;  Properties:&#10;    OKActions: [!Ref $NOTIF$]&#10;    InsufficientDataActions: [!Ref $NOTIF$]&#10;    AlarmActions: [!Ref $NOTIF$]&#10;    # rest of properties, e.g: ComparisonOperator, Threshold, EvaluationPeriods, Period, MetricName, Namespace" description="a lambda-customised cloudwatch alarm" toReformat="false" toShortenFQNames="true">
         <variable name="FN" expression="" defaultValue="&quot;AlarmProcessorFn&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs8.10&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
         <variable name="ROLE" expression="" defaultValue="&quot;Role&quot;" alwaysStopAt="true" />
         <variable name="NOTIF" expression="" defaultValue="&quot;LambdaNotification&quot;" alwaysStopAt="true" />
@@ -267,14 +266,12 @@
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
-    <template name="dy" value="$NAME$:&#10;  Type: AWS::DynamoDB::Table&#10;  DeletionPolicy: $DEL$&#10;  Properties:&#10;    ProvisionedThroughput:&#10;      ReadCapacityUnits: $READ$&#10;      WriteCapacityUnits: $WRITE$&#10;    KeySchema:&#10;    - AttributeName: $KEY$&#10;      KeyType: $KEY_TYPE$&#10;    AttributeDefinitions:&#10;    -  AttributeName: $ATTR$&#10;       AttributeType: $ATTR_TYPE$&#10;$END$" description="dynamodb table" toReformat="true" toShortenFQNames="true">
+    <template name="dy" value="$NAME$:&#10;  Type: AWS::DynamoDB::Table&#10;  Properties:&#10;    ProvisionedThroughput:&#10;      ReadCapacityUnits: $READ$&#10;      WriteCapacityUnits: $WRITE$&#10;    KeySchema:&#10;    - AttributeName: $KEY$&#10;      KeyType: $KEY_TYPE$&#10;    AttributeDefinitions:&#10;    -  AttributeName: $KEY$&#10;       AttributeType: $ATTR_TYPE$&#10;$END$" description="dynamodb table" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="&quot;Table&quot;" alwaysStopAt="true" />
-        <variable name="DEL" expression="enum(&quot;Snapshot&quot;, &quot;Retain&quot;, &quot;Delete)" defaultValue="" alwaysStopAt="true" />
         <variable name="READ" expression="" defaultValue="&quot;5&quot;" alwaysStopAt="true" />
         <variable name="WRITE" expression="" defaultValue="&quot;5&quot;" alwaysStopAt="true" />
         <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="KEY_TYPE" expression="" defaultValue="&quot;HASH&quot;" alwaysStopAt="true" />
-        <variable name="ATTR" expression="" defaultValue="&quot;Key&quot;" alwaysStopAt="true" />
         <variable name="ATTR_TYPE" expression="" defaultValue="&quot;S&quot;" alwaysStopAt="true" />
         <context>
             <option name="TYPEFORMATION" value="true" />
@@ -732,7 +729,7 @@
     <template name="micro" value="$NAME$Fn:&#10;  Type: AWS::Serverless::Function&#10;  Properties:&#10;    Handler: $HANDLER$&#10;    Runtime: $RUNTIME$&#10;    CodeUri: ./$FILE$&#10;    Environment:&#10;      Variables:&#10;        #key: !Ref Value&#10;    Events:&#10;      $EVENT$:&#10;        Type: $TYPE$&#10;        Properties:&#10;  Path: /$PATH$&#10;  Method: $METHOD$&#10;" description="microservice backed by http" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="HANDLER" expression="" defaultValue="&quot;index.handler&quot;" alwaysStopAt="true" />
-        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
+        <variable name="RUNTIME" expression="enum(&quot;python3.6&quot;,&quot;nodejs8.10&quot;,&quot;nodejs6.10&quot;,&quot;java8&quot;,&quot;nodejs4.3-edge&quot;,&quot;go1.x&quot;,&quot;nodejs4.3&quot;,&quot;python2.7&quot;,&quot;dotnetcore1.0&quot;,&quot;dotnetcore2.0&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="FILE" expression="" defaultValue="&quot;index.py&quot;" alwaysStopAt="true" />
         <variable name="EVENT" expression="" defaultValue="TYPE" alwaysStopAt="true" />
         <variable name="TYPE" expression="enum(&quot;Api&quot;, &quot;Schedule&quot;, &quot;S3&quot;, &quot;SNS&quot;, &quot;Kinesis&quot;, &quot;DynamoDB&quot;, &quot;CloudWatchEvent&quot;, &quot;IoTRule&quot;, &quot;AlexaSkill&quot;)" defaultValue="" alwaysStopAt="true" />
@@ -779,7 +776,7 @@
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
-    <template name="suba" value="!Sub '${$RESOURCE$.Arn}'" description="substitute, using arn" toReformat="false" toShortenFQNames="true">
+    <template name="arn" value="!Sub '${$RESOURCE$.Arn}'" description="substitute, using arn" toReformat="false" toShortenFQNames="true">
         <variable name="RESOURCE" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="TYPEFORMATION" value="true" />
@@ -805,7 +802,7 @@
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
-    <template name="mu" value="Ubuntu16.04LTS:&#10;  us-gov-west-1:&#10;    x64: ami-fb77e29a&#10;  cn-north-1:&#10;    x64: ami-a209d6cf&#10;  eu-west-3:&#10;    x64: ami-9a03b5e7&#10;  us-east-2:&#10;    x64: ami-e82a1a8d&#10;  sa-east-1:&#10;    x64: ami-5782d43b&#10;  eu-central-1:&#10;    x64: ami-cd491726&#10;  us-west-1:&#10;    x64: ami-493f2f29&#10;  us-west-2:&#10;    x64: ami-ca89eeb2&#10;  ap-northeast-2:&#10;    x64: ami-633d920d&#10;  ca-central-1:&#10;    x64: ami-9d7afcf9&#10;  eu-west-2:&#10;    x64: ami-506e8f37&#10;  ap-southeast-1:&#10;    x64: ami-82c9ecfe&#10;  eu-west-1:&#10;    x64: ami-74e6b80d&#10;  ap-southeast-2:&#10;    x64: ami-2b12dc49&#10;  ap-northeast-1:&#10;    x64: ami-60a4b21c&#10;  us-east-1:&#10;    x64: ami-6dfe5010&#10;  ap-northeast-3:&#10;    x64: ami-89c3cdf4&#10;  ap-south-1:&#10;    x64: ami-dba580b4" description="mapping ubuntu 16.04 LTS (64-bit, ebs, hvm, vendor)" toReformat="false" toShortenFQNames="false">
+    <template name="mu" value="Ubuntu1604LTS:&#10;  us-gov-west-1:&#10;    x64: ami-fb77e29a&#10;  cn-north-1:&#10;    x64: ami-a209d6cf&#10;  eu-west-3:&#10;    x64: ami-9a03b5e7&#10;  us-east-2:&#10;    x64: ami-e82a1a8d&#10;  sa-east-1:&#10;    x64: ami-5782d43b&#10;  eu-central-1:&#10;    x64: ami-cd491726&#10;  us-west-1:&#10;    x64: ami-493f2f29&#10;  us-west-2:&#10;    x64: ami-ca89eeb2&#10;  ap-northeast-2:&#10;    x64: ami-633d920d&#10;  ca-central-1:&#10;    x64: ami-9d7afcf9&#10;  eu-west-2:&#10;    x64: ami-506e8f37&#10;  ap-southeast-1:&#10;    x64: ami-82c9ecfe&#10;  eu-west-1:&#10;    x64: ami-74e6b80d&#10;  ap-southeast-2:&#10;    x64: ami-2b12dc49&#10;  ap-northeast-1:&#10;    x64: ami-60a4b21c&#10;  us-east-1:&#10;    x64: ami-6dfe5010&#10;  ap-northeast-3:&#10;    x64: ami-89c3cdf4&#10;  ap-south-1:&#10;    x64: ami-dba580b4" description="mapping ubuntu 16.04 LTS (64-bit, ebs, hvm, vendor)" toReformat="false" toShortenFQNames="false">
         <context>
             <option name="TYPEFORMATION" value="true" />
         </context>
