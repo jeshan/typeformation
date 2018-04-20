@@ -9,8 +9,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+      Initial release.
     ]]>
     </change-notes>
 
@@ -25,9 +24,5 @@
         <defaultLiveTemplatesProvider implementation="TypeFormationProvider"/>
         <liveTemplateContext implementation="TypeFormationContext"/>
     </extensions>
-
-    <actions>
-        <!-- Add your actions here -->
-    </actions>
 
 </idea-plugin>
