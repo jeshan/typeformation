@@ -2,7 +2,7 @@
 # Why bother?
 Writing Cloudformation templates is fun but **remembering its syntax is not**. This is for the lazy DevOps engineers; the kind of geek who wants to get things done, the kind who hates checking the docs all day for how this thing is supposed to work; the kind who wants to avoid wasting time deploying their CFN templates, wait 10 minutes only to find out that they missed a required input.
 
-Finally, you can type Cloudformation templates with pleasure with live templates.
+Finally, you can type Cloudformation templates with pleasure with Intellij live templates. It should work with any Jetbrains IDE for now (IntelliJ IDEA, PhpStorm, WebStorm, PyCharm, RubyMine, AppCode, CLion, GoLand, DataGrip, Rider, MPS, Android Studio)
 
 # Services covered
 These services are covered with various extents. Expect active development on them:
@@ -50,7 +50,6 @@ These services are covered with various extents. Expect active development on th
 - Stelligent team (https://github.com/stelligent/cloudformation_templates)
 - Cloudonaut (https://cloudonaut.io/)
 - AWS docs of course (https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html)
-
 - List of AWS Principal events from Jared Short (https://gist.github.com/shortjared/4c1e3fe52bdfa47522cfe5b41e5d6f22)
 
 
