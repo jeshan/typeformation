@@ -733,7 +733,7 @@
             <option name="TYPEFORMATION" value="true" />
         </context>
     </template>
-    <template name="ses3" value="S3:&#10;  Type: S3&#10;  Properties:&#10;    Bucket: !Ref $BUCKET$&#10;    Events: ['$EVENT$']&#10;    Filter:&#10;      S3Key:&#10;        Rules:&#10;        - Name: $NAME$&#10;          Value: $EXT$&#10;$END$" description="serverless s3 event" toReformat="true" toShortenFQNames="true">
+    <template name="ses3" value="S3:&#10;  Type: S3&#10;  Properties:&#10;    Bucket: !Ref $BUCKET$&#10;    Events: ['s3:$EVENT$']&#10;    Filter:&#10;      S3Key:&#10;        Rules:&#10;        - Name: $NAME$&#10;          Value: $EXT$&#10;$END$" description="serverless s3 event" toReformat="true" toShortenFQNames="true">
         <variable name="BUCKET" expression="" defaultValue="&quot;Bucket&quot;" alwaysStopAt="true" />
         <variable name="EVENT" expression="enum(&quot;ObjectCreated:*&quot;,&quot;ObjectCreated:Put&quot;,&quot;ObjectCreated:Post&quot;,&quot;ObjectCreated:Copy&quot;,&quot;ObjectCreated:CompleteMultipartUpload&quot;,&quot;ObjectRemoved:*&quot;,&quot;ObjectRemoved:Delete&quot;,&quot;ObjectRemoved:DeleteMarkerCreated&quot;,&quot;ReducedRedundancyLostObject&quot;)" defaultValue="" alwaysStopAt="true" />
         <variable name="NAME" expression="enum(&quot;suffix&quot;, &quot;prefix&quot;)" defaultValue="" alwaysStopAt="true" />

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>co.jeshan.code.typeformation</id>
     <name>Typeformation</name>
-    <version>0.1</version>
+    <version>0.2</version>
     <vendor email="j@jeshan.co" url="https://github.com/jeshan">Jeshan Babooa</vendor>
 
     <description><![CDATA[
