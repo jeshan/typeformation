@@ -11,6 +11,12 @@ Finally, you can type Cloudformation templates with pleasure with Intellij live 
 ## Serverless demo
 <a href="https://www.youtube.com/watch?v=kSaiOteeMOc">![Foo](https://img.youtube.com/vi/kSaiOteeMOc/0.jpg)]</a>
 
+# Screenshots
+![](https://plugins.jetbrains.com/files/10653/screenshot_18020.png)
+
+![](https://plugins.jetbrains.com/files/10653/screenshot_18023.png)
+
+![](https://plugins.jetbrains.com/files/10653/screenshot_18019.png)
 
 # Services covered
 These services are covered with various extents. Expect active development on them:
