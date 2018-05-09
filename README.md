@@ -4,6 +4,11 @@ Writing Cloudformation templates is fun but **remembering its syntax is not**. T
 
 Finally, you can type Cloudformation templates with pleasure with Intellij live templates. It should work with any Jetbrains IDE for now (IntelliJ IDEA, PhpStorm, WebStorm, PyCharm, RubyMine, AppCode, CLion, GoLand, DataGrip, Rider, MPS, Android Studio)
 
+# Install
+Find it in the plugins page in your IDE or here:
+
+https://plugins.jetbrains.com/plugin/10653-typeformation
+
 # Demos
 ## General demo
 <a href="https://www.youtube.com/watch?v=WALwWUauGaI">![Foo](https://img.youtube.com/vi/WALwWUauGaI/0.jpg)]</a>
