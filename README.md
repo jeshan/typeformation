@@ -64,6 +64,16 @@ These services are covered with various extents. Expect active development on th
   - Because this project is still in its infancy. Pull requests, sample code and use cases welcome
 - Will you support other IDEs?
   - The only editor I use is Intellij. I'll be glad to find contributors to help me understand how live templates for other editors work. Intellij live templates will remain the "source of truth"
+Submit your feature request to support your favourite editor with this snippet:
+
+```
+Title: Support editor $EDITOR
+Official docs on how to create snippets: $DOCS_URL
+How to package plugins: $PLUGIN_URL
+Example open source project that provides snippets: $PROJECT
+
+To demonstrate interest in this and prioritise, click the thumbs up.
+```
 
 # Credits
 - Stelligent team (https://github.com/stelligent/cloudformation_templates)
